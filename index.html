@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="UTF-8">
+<title>Weather App</title>
+<link rel="shortcut icon" href="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../assets/preview/2016/png/iconmonstr-weather-80.png&r=0&g=0&b=0">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/weather-icons.css">
+</head>
+
+<body>
+<div class="weather-top">
+  <header class="container">
+    <h1 id="weather-header">Weather App</h1>
+  </header>
+  <!--Header-->
+	<section class="container">
+		<div class="loader"></div>
+    <h1 class="loader-txt">Chargement...</h1>
+	</section>
+  <section class="container info-content ">
+    <div>
+      <h4 id="local-city" class="text-middle borderRad animated flipInX"></h4>
+    </div>
+    <div>
+      <button class="search glyphicon glyphicon-search" name="search" type="submit"></button>
+  		<button class="glyphicon glyphicon-refresh" onclick="refrech()" name="refrech"></button>
+    </div>
+  </section>
+  <section class="container info-content">
+    <div>
+      <h5 id="local-date" class="text-middle borderRad animated flipInX"></h5>
+    </div>
+  </section>
+</div>
+<div class="weather-bottom">
+  <!--City section-->
+  <section class="container info-content">
+   <div class="container-weather animated flipInX">
+      <div>
+        <h4 id="celsius" class="local-temperature text-middle borderRad"></h4>
+        <h4 style="display:none;" id="feirheit" class="local-temperature text-middle borderRad"></h4>
+      </div>
+  <!--Temperature section-->
+    <div id="local-meteo" class="borderRad animated flipInX">
+      <div class="icon sun-shower">
+        <div class="cloud"></div>
+        <div class="sun">
+          <div class="rays"></div>
+        </div>
+        <div class="rain"></div>
+      </div>
+
+      <div class="icon thunder-storm">
+        <div class="cloud"></div>
+        <div class="lightning">
+          <div class="bolt"></div>
+          <div class="bolt"></div>
+        </div>
+      </div>
+
+      <div class="icon cloudy">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+      </div>
+
+      <div class="icon flurries">
+        <div class="cloud"></div>
+        <div class="snow">
+          <div class="flake"></div>
+          <div class="flake"></div>
+        </div>
+      </div>
+
+      <div class="icon sunny">
+        <div class="sun">
+          <div class="rays"></div>
+        </div>
+      </div>
+
+      <div class="icon rainy">
+        <div class="cloud"></div>
+        <div class="rain"></div>
+      </div>
+    </div>
+  </section>
+  <!--Icon meteo section-->
+  <section class="container info-content">
+   <div class="container-weather animated flipInX">
+      <div>
+        <h4 id="local-wind" class="text-middle borderRad"></h4>
+      </div>
+      <div>
+        <h4 id="local-humidity" class="text-middle borderRad"></h4>
+      </div>
+    </div>
+  </section>
+  <!-- Humidity and Wind section-->
+	<section class="container" style="padding: 0;">
+    <div class="forecast borderRad">
+      <div class="row">
+        <div id="oneDay" class="col day"></div>
+        <div class="row"><i id="oneDayIcon" class="wi"></i></div>
+        <div id="oneDate" class="col"></div>
+      </div>
+      <div class="row">
+        <div id="twoDay" class="col day"></div>
+        <div class="row"><i id="twoDayIcon" class="wi"></i></div>
+        <div id="twoDate" class="col"></div>
+      </div>
+      <div class="row">
+        <div id="threeDay" class="col day"></div>
+        <div class="row"><i id="threeDayIcon" class="wi"></i></div>
+        <div id="threeDate" class="col"></div>
+      </div>
+      <div class="row">
+        <div id="fourDay" class="col day"></div>
+        <div class="row"><i id="fourDayIcon" class="wi"></i></div>
+        <div id="fourDate" class="col"></div>
+  </div>
+	</section>
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2017 | Martin Jean-Christio | Tous droits réservés.<br/>
+				Weather Icon by <a class="link" href="https://codepen.io/joshbader/full/EjXgqr/" target="blank">Josh Bader</a>
+			</p>
+    </div>
+  </footer>
+</div>
+  <!-- Footer of the page -->
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootbox.min.js"></script>
+  <script type="text/javascript" src="js/weathernow.js"></script>
+  <script type="text/javascript" src="js/search.js"></script>
+  <script type="text/javascript" src="js/moment-with-locales.js"></script>
+  <script type="text/javascript" src="js/moment-timezone.js"></script>
+  <script type="text/javascript" src="js/icon-weather.js"></script>
+  </body>
+</html>
